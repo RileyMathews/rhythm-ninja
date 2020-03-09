@@ -1,0 +1,5 @@
+FROM python:latest
+ENV PYTHONPATH=/python
+ENV PATH=$PATH:/python/bin
+WORKDIR /code
+CMD [ "/bin/bash" ]

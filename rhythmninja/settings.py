@@ -25,7 +25,7 @@ SECRET_KEY = 'e8&m2^z13wiv5ov^$t!t*e2il!(+0tg2!ebfo3dxt@xnp8u7v%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'rhythmninja.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'database',
+        'PORT': '5432',
+        'NAME': 'rhythm-ninja-database',
+        'USER': 'postgres_user_dev',
+        'PASSWORD': 'postgres_password_dev'
     }
 }
 
